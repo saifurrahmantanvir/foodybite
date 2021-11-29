@@ -1,0 +1,95 @@
+.signup {
+   grid-column: full-start / full-end;
+   padding: 8rem 4rem;
+   background-image: linear-gradient(to top left, rgba(#1a913b, 0.85), rgba(#df1122, 0.85)), url('../img/sign-up-background.jpg');
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   @media only screen and (max-width: 52.5em) {
+      padding: 0;
+   }
+
+
+   &__form-container {
+      background-image: linear-gradient(110deg, #fff 50%, rgba(#d8d8d8, 0.25) 50%);
+      font-size: 2.5rem;
+      padding: 7rem;
+      background-color: #fff;
+      border-radius: 3px;
+
+      display: grid;
+      grid-template-columns: repeat(8, minmax(min-content, 12rem));
+
+      @media only screen and (max-width: 52.5em) {
+         grid-gap: 3rem;
+         border-radius: 0;
+      }
+
+      @media only screen and (max-width: 35em) {
+         padding: 5rem;
+      }
+
+   }
+
+   &__form-title {
+      grid-column: 1 / -1;
+      z-index: 10;
+      font-size: 3rem;
+      margin-bottom: 5rem;
+   
+      &::before, &::after {
+         height: 5rem;
+         width: 5rem;
+      }
+   }
+
+   &__form {
+      grid-column: 1 / span 4;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 2rem;
+      align-items: center;
+
+      @media only screen and (max-width: 52.5em) {
+         grid-column: 1 / -1;
+         justify-self: center;
+      }
+   }
+
+   &__label {
+      font-weight: 400;
+      letter-spacing: -2px;
+   }
+
+   & select,
+   &__cta {
+      justify-self: start;
+   }
+
+   &__cta {
+      grid-column: 2 / -1;
+   }
+
+   &__svg {
+      grid-column: 5 / -1;
+      justify-self: center;
+      align-self: center;
+      height: 25rem;
+      width: auto;
+
+      @media only screen and (max-width: 52.5em) {
+         grid-column: 1 / -1;
+         grid-row: 2 / 3;
+      }
+
+      @media only screen and (max-width: 35em) {
+         height: 20rem;
+         width: auto;
+      }
+   }
+}

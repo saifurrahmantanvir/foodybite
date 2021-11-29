@@ -1,0 +1,45 @@
+.header {
+   grid-column: full-start / full-end;
+   padding: 10rem;
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+   position: relative;
+   height: 100vh;
+
+   @media only screen and (max-width: 35em) {
+      padding: 3rem;
+      padding-left: 5rem;
+   }
+
+   @media only screen and (max-width: 28.75em) {
+      height: 95vh;
+   }
+   
+   &__text-box {
+      display: grid;
+      grid-gap: 2rem;
+      animation-name: fadeInBottom;
+      animation-duration: 1s;
+   }
+
+   &__cta {
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      grid-gap: 2rem;
+      justify-self: start;
+   }
+}
+
+@keyframes fadeInBottom {
+   0% {
+      opacity: 0;
+      transform: translateY(10rem);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}

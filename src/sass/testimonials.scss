@@ -1,0 +1,147 @@
+.testimonials {
+   grid-column: center-start / center-end;
+   padding: 10rem 0;
+
+   &__container {
+      position: relative;
+      max-width: 100rem;
+      height: 40rem;
+      margin: 0 auto;
+
+      overflow: hidden;
+
+      @media only screen and (max-width: 35em) {
+         height: 65rem;
+      }
+   }
+
+   &__btn {
+      font-size: 2.5rem;
+      padding: 1.3rem 1.5rem;
+      border: none;
+      border-radius: 25%;
+      color: var(--color-primary);
+      background-color: #fff;
+      box-shadow: 0 1rem 3rem rgba(#000, 0.2);
+      cursor: pointer;
+
+      position: absolute;
+      top: 40%;
+
+      @media only screen and (max-width: 35em) {
+         font-size: 3.5rem;
+      }
+
+      &--left {
+         left: 7%;
+
+         @media only screen and (max-width: 35em) {
+            left: 5%;
+         }
+      }
+      &--right {
+         right: 7%;
+
+         @media only screen and (max-width: 35em) {
+            right: 5%;
+         }
+      }
+   }
+}
+
+.testimonial {
+   &__slide {
+      position: absolute;
+      top: 0;
+      height: 40rem;
+      width: 100%;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media only screen and (max-width: 35em) {
+         flex-direction: column;
+         height: 100%;
+         gap: 5rem;
+      }
+
+      transition: transform 2s;
+
+      &--1 { transform: translateX(0%); }
+
+      &--2 { transform: translateX(100%); }
+
+      &--3 { transform: translateX(200%); }
+   }
+
+   &__text {
+      font-size: 2.8rem;
+      letter-spacing: -2px;
+      width: 42%;
+      margin: 0 7rem;
+      
+      @media only screen and (max-width: 52.5em) {
+         margin: 0 4rem;
+      }
+
+      @media only screen and (max-width: 35em) {
+         width: 50%;
+         margin: 0;
+      }
+
+      position: relative;
+
+      &::before {
+         position: absolute;
+         top: -6rem;
+         left: -6rem;
+         display: block;
+         content: "\201C";
+         font-size: 13rem;
+         font-family: Verdana, sans-serif;
+         color: var(--color-primary);
+      }
+   }
+
+   &__author {
+      font-style: normal;
+
+      & figure {
+         position: relative;
+         height: 8rem;
+         width: 8rem;
+         margin-bottom: 1.5rem;
+
+         &::before {
+            position: absolute;
+            display: inline-block;
+            content: '';
+            height: 105%;
+            width: 105%;
+            z-index: -1;
+            transform: translate(1.2rem, -1.5rem);
+            border: 1px dashed var(--color-primary);
+         }
+      }
+
+      & img {
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         box-shadow: 1rem 1rem 2rem rgba(#000, 0.5);
+      }
+
+      &--name {
+         font-size: 1.8rem;
+         color: var(--color-primary);
+         letter-spacing: -1px;
+         margin-bottom: 0.5rem;
+      }
+
+      &--tag {
+         font-weight: 400;
+         font-size: 1.5rem;
+      }
+   }
+}

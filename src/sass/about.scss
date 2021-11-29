@@ -1,0 +1,10 @@
+.about {
+   grid-column: center-start / center-end;
+   padding: 10rem 0;
+
+   &__description {
+      font-size: 3rem;
+      letter-spacing: -2px;
+      width: 90%;
+   }
+}

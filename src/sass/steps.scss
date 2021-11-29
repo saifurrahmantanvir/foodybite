@@ -1,0 +1,14 @@
+.steps {
+   grid-column: center-start / center-end;
+   padding: 10rem 0;
+}
+
+.step {
+   display: flex;
+   justify-content: center;
+   gap: 5rem;
+   
+   @media only screen and (max-width: 52.5em) {
+      flex-wrap: wrap;
+   }
+}

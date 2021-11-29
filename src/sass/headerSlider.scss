@@ -1,0 +1,40 @@
+.header__slider-container {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: -1;
+}
+
+.header__slider {
+   position: relative;
+   height: 100%;
+   overflow: hidden;
+}
+
+.header__slide {
+   position: absolute;
+   top: 0;     /* don't specify left value */
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   transition: transform 1.5s;
+
+   &--1 {
+      transform: translateX(0%);
+      background-image: linear-gradient(90deg, rgba(#000, 0.85), rgba(#000, 0.85)), url('../img/hero-1.jpg');
+   }
+
+   &--2 {
+      transform: translateX(100%);
+      background-image: linear-gradient(90deg, rgba(#000, 0.85), rgba(#000, 0.85)), url('../img/hero-2.jpg');
+   }
+   
+   &--3 {
+      transform: translateX(200%);
+      background-image: linear-gradient(90deg, rgba(#000, 0.85), rgba(#000, 0.85)), url('../img/hero-3.jpg');
+   }
+}
