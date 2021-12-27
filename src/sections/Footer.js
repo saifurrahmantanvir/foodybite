@@ -1,7 +1,7 @@
 import React from 'react'
 import '../sass/footer.scss'
 
-import logoWhite from '../img/logo-white.png';
+import logoWhite from '../img/logo/logo-white.png';
 
 import { Discord, Facebook, Instagram, WhatsApp } from '../icons/SvgIcons';
 

@@ -3,7 +3,7 @@ import '../sass/navbar.scss'
 
 import { Link } from 'react-scroll';
 
-import LogoWhite from '../img/logo-white.png'
+import LogoWhite from '../img/logo/logo-white.png'
 
 const Navbar = function () {
    const [nav, setNav] = React.useState(false);
@@ -61,8 +61,8 @@ const Navbar = function () {
                   : <img src={LogoWhite} alt='' className="nav__logo" />
             }
 
-            <button className='nav__menu' onClick={toggleNav}>
-               <span className='nav__menu-btn'></span>
+            <button className={`nav__btn ${nav ? 'nav__close' : ''}`} onClick={toggleNav}>
+               <span className={`${nav ? 'nav__btn-close' : 'nav__btn-open'}`}></span>
             </button>
 
             <ul className={`nav__list ${nav ? 'nav__list-visible' : ''}`}
@@ -100,7 +100,7 @@ const Navbar = function () {
                </li>
 
                <li className='nav__item'>
-                  <Link to=''
+                  <Link to='signup'
                      className='nav__link nav__link--btn'
                      onClick={toggleNav}
                      duration={1000} smooth={true}

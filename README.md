@@ -1,6 +1,6 @@
 # Foodybite
 
-Foodybite is a fictional website for a restaurant. it offers healthy meals to the consumers.
+Foodybite is a fictional website for a restaurant. it offers healthy meal to the consumers.
 
 # Tecnologies used to build this website
 

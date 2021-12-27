@@ -30,12 +30,12 @@
       }
    }
 
-   &__menu {
+   &__btn {
       z-index: 9999;
       display: none;
       align-self: flex-start;
       margin: 1.5rem 3rem;
-      padding: 1.5rem 2.8rem 2rem 2rem;
+      padding: 1.3rem 2.8rem 2rem 2rem;
       background: var(--color-primary);
       border: none;
       border-radius: 3px;
@@ -48,10 +48,20 @@
          display: inline-block;
       }
 
-      &-btn {
+      &-open,
+      &-close {
          position: relative;
          width: 2rem;
-         
+
+         &::before,
+         &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+         }
+      }
+
+      &-open {
          &,
          &::before,
          &::after {
@@ -60,23 +70,36 @@
             background-color: #fff;
          }
  
+         &::before {
+            width: 3rem;
+            top: -0.8rem;
+         }
+         &::after {
+            width: 1rem;
+            top: 0.8rem;
+         }
+      }
+
+      &-close {
          &::before,
          &::after {
-             content: "";
-             position: absolute;
-             left: 0;
-             transition: top 0.2s, transform 0.2s;
+            display: inline-block;
+            height: 2.5px;
+            width: 2.5rem;
+            background-color: #fff;
          }
- 
+
          &::before {
-             width: 3rem;
-             top: -0.8rem;
+            transform: rotate(135deg);
          }
          &::after {
-             width: 1rem;
-             top: 0.8rem;
+            transform: rotate(-135deg);
          }
-     }
+      }
+   }
+
+   &__close {
+      padding: 2.5rem 4.55rem 2.8rem 2.3rem;
    }
 
    &__list {
@@ -117,6 +140,7 @@
       display: inline-block;
       padding: 1rem 2rem;
       border-radius: 3px;
+      cursor: pointer;
       transition: opacity 0.3s, background-color 0.3s;
 
       @media only screen and (max-width: 35em) {

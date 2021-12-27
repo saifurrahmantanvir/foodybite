@@ -1,9 +1,9 @@
 import React from 'react'
 import '../sass/testimonials.scss'
 
-import tanvir from '../img/tanvir.jpg'
-import asma from '../img/asma.jpg'
-import jonas from '../img/jonas.jpg'
+import tanvir from '../img/review/tanvir.jpg'
+import asma from '../img/review/asma.jpg'
+import jonas from '../img/review/jonas.jpg'
 
 import DotContainer from '../components/DotContainer';
 import useSliderHook from '../hooks/useSliderHook'

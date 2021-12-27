@@ -20,21 +20,26 @@
    height: 100%;
    background-size: cover;
    background-position: center;
+   background-repeat: no-repeat;
    background-attachment: fixed;
    transition: transform 1.5s;
 
+   @media only screen and (max-width: 28.75em) {
+      background-position: left;
+   }
+
    &--1 {
       transform: translateX(0%);
-      background-image: linear-gradient(90deg, rgba(#000, 0.85), rgba(#000, 0.85)), url('../img/hero-1.jpg');
+      background-image: linear-gradient(90deg, rgba(#000, 0.8), rgba(#000, 0.8)), url('../img/background/hero-1.jpg');
    }
 
    &--2 {
       transform: translateX(100%);
-      background-image: linear-gradient(90deg, rgba(#000, 0.85), rgba(#000, 0.85)), url('../img/hero-2.jpg');
+      background-image: linear-gradient(90deg, rgba(#000, 0.8), rgba(#000, 0.8)), url('../img/background/hero-2.jpg');
    }
    
    &--3 {
       transform: translateX(200%);
-      background-image: linear-gradient(90deg, rgba(#000, 0.85), rgba(#000, 0.85)), url('../img/hero-3.jpg');
+      background-image: linear-gradient(90deg, rgba(#000, 0.8), rgba(#000, 0.8)), url('../img/background/hero-3.jpg');
    }
 }
